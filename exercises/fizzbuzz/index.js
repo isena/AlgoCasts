@@ -12,6 +12,15 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+const word = _ => (_ % 15 === 0) ? 'fizzbuzz' 
+  : (_ % 3 === 0) ? 'fizz' 
+  : (_ % 5 === 0) ? 'buzz' 
+  : _
+
+const fizzBuzz = _ => {
+  for (let i = 1; i <= _; i++) {
+    console.log(word(i))
+  }
+}
 
 module.exports = fizzBuzz;
