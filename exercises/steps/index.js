@@ -17,6 +17,28 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// Solution #2
+const steps = (n, row = 0, stair = '') => {
+  if (n === row) return
+
+  if (n === stair.length) {
+    console.log(stair)
+    return steps(n, row + 1)
+  }
+  return steps(n, row, stair += stair.length <= row ? '#' : ' ')
+}
+
+// Solution #1
+// const steps = n => {
+//   for (let row = 0; row < n; row++) {
+//     let output = ''
+
+//     for (let column = 0; column < n; column++) {
+//       output += column <= row ? '#' : ' '
+//     }
+
+//     console.log(output)
+//   }
+// }
 
 module.exports = steps;
