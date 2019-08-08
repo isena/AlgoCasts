@@ -7,6 +7,8 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+const match = _ => _.match(/[aeiou]/ig) || ''
 
-module.exports = vowels;
+const vowels = _ => match(_).length
+
+module.exports = vowels
