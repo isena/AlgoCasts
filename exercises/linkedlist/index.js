@@ -102,6 +102,17 @@ class LinkedList {
     const next = previous.next
     previous.next = new Node(data, next)
   }
+
+  forEach(fn) {
+    let node = this.head
+    let count = 0
+
+    while(node) {
+      fn(node, count)
+      node = node.next
+      count++
+    }
+  }
 }
 
 module.exports = { Node, LinkedList }
